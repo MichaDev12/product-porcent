@@ -18,7 +18,11 @@ button {
   color: #a99ec3;
 }
 
-h1 {
+h1,
+.productName,
+.garrafaPrice,
+.percentajePrice,
+.finalPrice {
   text-align: center;
 }
 
