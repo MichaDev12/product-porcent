@@ -1,6 +1,17 @@
+body {
+  background-color: #f2ddef;
+}
+
+h1,
+div,
+button {
+  color: #375071;
+}
+
 h1 {
   text-align: center;
 }
+
 .submit,
 .productInput,
 .priceInput,
@@ -37,6 +48,8 @@ h1 {
 button,
 input {
   height: 40px;
+  background-color: #a99ec3;
+  border-color: #f2ddef;
 }
 
 input {
@@ -48,7 +61,19 @@ input {
 }
 
 .table div {
-  margin: 0 5px;
+  margin: 10px 5px;
+}
+
+.title {
+  border-bottom: 2px solid #a99ec3;
+}
+
+.products, 
+.garrafaPrices,
+.percentajePrices, 
+.finalPrices {
+  border-left: 2px solid #a99ec3;
+  border-right: 2px solid #a99ec3;
 }
 
 .title {
