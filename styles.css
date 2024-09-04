@@ -23,9 +23,19 @@ h1,
 .garrafaPrice,
 .percentajePrice,
 .finalPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
+.productName,
+.garrafaPrice,
+.percentajePrice,
+.finalPrice {
+  min-height: 85px;
+  max-width: 130px;
+}
 .submit,
 .productInput,
 .priceInput,
