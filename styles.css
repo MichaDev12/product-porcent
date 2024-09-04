@@ -8,6 +8,16 @@ button {
   color: #375071;
 }
 
+.purple {
+  background-color: #a99ec3;
+  color: #375071;
+}
+
+.blue {
+  background-color: #375071;
+  color: #a99ec3;
+}
+
 h1 {
   text-align: center;
 }

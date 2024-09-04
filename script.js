@@ -6,6 +6,8 @@ const productInput = document.querySelector('#product');
 const priceInput = document.querySelector('#price');
 const button = document.querySelector('button');
 
+let decision = true;
+
 button.addEventListener('click', () => {
   const productName = productInput.value;
   const productPrice = Number(priceInput.value);
@@ -42,4 +44,19 @@ button.addEventListener('click', () => {
   finalPrice.textContent = porcentaje * 4;
   finalPrice.classList.toggle('finalPrice');
   finalPrices.appendChild(finalPrice);
+
+  //background-color
+  if (decision) {
+    product.classList.toggle('purple');
+    price.classList.toggle('purple');
+    percentajePrice.classList.toggle('purple');
+    finalPrice.classList.toggle('purple');
+    decision = false;
+  } else {
+    product.classList.toggle('blue');
+    price.classList.toggle('blue');
+    percentajePrice.classList.toggle('blue');
+    finalPrice.classList.toggle('blue');
+    decision = true;
+  }
 });
