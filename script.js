@@ -19,19 +19,23 @@ button.addEventListener('click', () => {
 
   // product name
   product.textContent = productName;
+  product.classList.toggle('productName');
   products.appendChild(product);
 
   // product price
   price.textContent = productPrice;
+  price.classList.toggle('garrafaPrice');
   garrafaPrices.appendChild(price);
 
   // price with 70%
   let unitPrice = productPrice / 4;
   let porcentaje = unitPrice + (70 * unitPrice) / 100;
   percentajePrice.textContent = porcentaje;
+  percentajePrice.classList.toggle('percentajePrice');
   percentajePrices.appendChild(percentajePrice);
 
   // final price
   finalPrice.textContent = porcentaje * 4;
+  finalPrice.classList.toggle('finalPrice');
   finalPrices.appendChild(finalPrice);
 });
