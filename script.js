@@ -18,7 +18,11 @@ button.addEventListener('click', () => {
   const finalPrice = document.createElement('div');
 
   // product name
-  product.textContent = productName;
+  if (productName == '') {
+    product.textContent = 'Producto';
+  } else {
+    product.textContent = productName;
+  }
   product.classList.toggle('productName');
   products.appendChild(product);
 
