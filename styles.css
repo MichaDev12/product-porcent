@@ -1,5 +1,50 @@
+h1 {
+  text-align: center;
+}
+.submit,
+.productInput,
+.priceInput,
 .table {
   display: flex;
+}
+
+.productInput,
+.priceInput {
+  align-items: center;
+}
+
+.submit {
+  flex-direction: column;
+  margin: 15px 5px;
+}
+
+.submit div {
+  margin: 10px 0;
+}
+
+.productInput {
+  flex-direction: row;
+}
+
+.productInput label,
+.productInput input,
+.priceInput label,
+.priceInput input {
+  flex-grow: 1;
+  padding: 0 5px;
+}
+
+button,
+input {
+  height: 40px;
+}
+
+input {
+  max-width: 45vw;
+}
+
+.table {
+  justify-content: center;
 }
 
 .table div {
