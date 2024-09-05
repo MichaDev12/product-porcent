@@ -5,6 +5,7 @@ const finalPrices = document.querySelector('.finalPrices');
 const productInput = document.querySelector('#product');
 const priceInput = document.querySelector('#price');
 const addProduct = document.querySelector('#addProduct');
+const deleteLast = document.querySelector('#deleteLast');
 const reset = document.querySelector('#reset');
 
 let decision = true;
@@ -89,4 +90,18 @@ reset.addEventListener('click', () => {
   titleFour.classList.toggle('title');
   finalPrices.appendChild(titleFour);
 
+});
+
+deleteLast.addEventListener('click', () => {
+  if (products.childElementCount > 1) {
+    products.removeChild(products.lastChild);
+    garrafaPrices.removeChild(garrafaPrices.lastChild);
+    percentajePrices.removeChild(percentajePrices.lastChild);
+    finalPrices.removeChild(finalPrices.lastChild);
+  }
+  if (decision) {
+    decision = false;
+  } else {
+    decision = true;
+  }
 });
