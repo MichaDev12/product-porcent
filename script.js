@@ -4,11 +4,12 @@ const percentajePrices = document.querySelector('.percentajePrices');
 const finalPrices = document.querySelector('.finalPrices');
 const productInput = document.querySelector('#product');
 const priceInput = document.querySelector('#price');
-const button = document.querySelector('button');
+const addProduct = document.querySelector('#addProduct');
+const reset = document.querySelector('#reset');
 
 let decision = true;
 
-button.addEventListener('click', () => {
+addProduct.addEventListener('click', () => {
   const productName = productInput.value;
   const productPrice = Number(priceInput.value);
   productInput.value = '';
@@ -59,4 +60,33 @@ button.addEventListener('click', () => {
     finalPrice.classList.toggle('blue');
     decision = true;
   }
+});
+
+reset.addEventListener('click', () => {
+  const titleOne = document.createElement('div');
+  const titleTwo = document.createElement('div');
+  const titleThree = document.createElement('div');
+  const titleFour = document.createElement('div');
+  while (products.firstChild) {
+    products.removeChild(products.firstChild);
+    garrafaPrices.removeChild(garrafaPrices.firstChild);
+    percentajePrices.removeChild(percentajePrices.firstChild);
+    finalPrices.removeChild(finalPrices.firstChild);
+  }
+  titleOne.textContent = 'Nombre Producto';
+  titleOne.classList.toggle('title');
+  products.appendChild(titleOne);
+
+  titleTwo.textContent = 'Precio Original';
+  titleTwo.classList.toggle('title');
+  garrafaPrices.appendChild(titleTwo);
+
+  titleThree.textContent = 'Unidad + 70%';
+  titleThree.classList.toggle('title');
+  percentajePrices.appendChild(titleThree);
+
+  titleFour.textContent = 'Precio Final';
+  titleFour.classList.toggle('title');
+  finalPrices.appendChild(titleFour);
+
 });
